@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para mi corazon de melon 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f9e1e7;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .Carta_Love {
+      position: relative;
+      background: var(--letter-bg, #fff);
+      color: var(--letter-text, #c0392b);
+      padding: 2em 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+      max-width: 400px;
+      flex-direction: column;
+      animation: aparecer 2s ease;
+    }
+
+    .Carta_Love h1 {
+      margin: 0 0 15px;
+      font-size: 1.8em;
+    }
+
+    .Carta_Love p {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .corazon {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      font-size: 2.5em;
+      animation: latido 1s infinite;
+    }
+
+    @keyframes latido {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #c0392b;
+      border: none;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e74c3c;
+    }
+
+    .sorpresa {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #8e44ad;
+      animation: aparecer 2s ease;
+    }
+
+    .sorpresa img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="Carta_Love">
+    <div class="corazon">❤️</div>
+    <h1>Para mi amor</h1>
+    <p>
+      Victoria mi corazon de melon, muchas gracias por 
+      aparecer en mi vida. Usted es muy valiosa para mi y hace
+      que mi corazon se estremesca cada vez que la veo o escucho su voz
+      este pequeño detalle lo hice para usted, espero y le guste amor mio.
+
+      I SARANGHEOOOOOOOO  💕
+    </p>
+
+    <!-- Botón de sorpresa -->
+    <button onclick="mostrarSorpresa()">Haz clic aquí 💌</button>
+
+    <!-- Contenido oculto -->
+    <div class="sorpresa" id="sorpresa">
+      🌹 Esta es solo una pequeña muestra  
+      de lo mucho que te amo 💕  
+      <img src="https://drive.google.com/file/d/1NIS8Q5z5lZnqOO4vuFEOH_ADczv4uw2G/view?usp=sharing" alt="Nosotros">
+      <!-- Puedes cambiar la URL por una foto de ustedes -->
+      <audio id="musica" src="https://drive.google.com/file/d/1zuWIOi-a16hN2L_W7bjQ-6GPCra0kN_4/view?usp=sharing"></audio>
+    </div>
+  </div>
+
+  <script>
+    function mostrarSorpresa() {
+      let sorpresa = document.getElementById('sorpresa');
+      let musica = document.getElementById('musica');
+
+      sorpresa.style.display = 'block';
+      musica.play();
+    }
+  </script>
+</body>
+</html>
